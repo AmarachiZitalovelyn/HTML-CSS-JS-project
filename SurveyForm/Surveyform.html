@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initialscale=1">
+        <title> Health and Wellness Survey </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <form action="https://formspree.io/f/" method="post">
+            <div class="survey-container">
+
+        <h1 class="survey-title"> Health & Wellness Survey </h1>
+        <p  class="survey-subtitle"> please fill out the form below. Fields marked with * are required.</p>
+
+        <fieldset class="form-section"> 
+        <legend> Personal Information</legend>
+
+        <div class="form-field">
+            <label for="fullname"> Full Name* </label>
+        <input class="text-input" type="text" id="full-name" name="full-name"  required maxilength="20">
+        <span class="error-message">Please enter your name.</span>
+        </div>
+
+         <div class="form-field">
+            <label for="email address"> Email Address* </label>
+        <input class="text-input" type="test" id="email-address" name="email-address" required>
+        <span class="error-message">Please enter your valid email.</span>
+        </div>
+
+
+        <div class="form-field">
+            <label for="age"> Age* </label>
+        <input class="text-input" for="age" id="age" name="age" min="15" maxi="120"> 
+        </div>
+        </fieldset>
+
+    <fieldset class="form-section">
+    <legend> How often do you exercise?* </legend>
+
+    <div class="radio-group">
+    <input class="radio-input" type="radio" id="exercise-daily" name="exercise" value="daily" required>
+    <label for="exercise-daily"> Daily</label>
+    </div>
+
+    <div class="radio-group">
+    <input  class="radio-input" type="radio" id="exercise-weekly" name="exercise" value="weekly">
+    <label for="exercise-weekly"> A few times a week</label>
+    </div>
+
+    <div class="radio-group">
+    <input class="radio-input" type="radio" id="exercise-rarely" name="exercise" value="rarely">
+    <label for="exercise-rarely"> Rarely</label>
+    </div>
+
+    <div class="radio-group">
+    <input class="radio-input" type="radio" id="exercise-never" name="exercise" value="never">
+    <label for exercise-never> Never</label>
+    </div>
+    <span class="error-message" id="exercise-error">Please choose an option</span>
+</fieldset>
+
+<fieldset class="form-section">
+    <legend>
+         Which topics interest you?
+        <button type="button" class="select-all-btn" id="select-all-btn"> Select all</button> 
+    </legend>
+
+    <div class="checkbox-group">
+    <input class="checkbox-input" type="checkbox" id="topic-nutrition" name="topic" value="nutrition">
+    <label for topic-nutrition> Nutrition</label>
+    </div>
+
+    <div class="checkbox-group">
+    <input class="checkbox-input" type="checkbox" id="topic-sleep" name="topic" value="sleep">
+    <label for="topic-sleep"> Sleep</label>
+    </div>
+
+    <div class="checkbox-group">
+    <input class="checkbox-input" type="checkbox" id="topic-stress" name="topic" value="stress">
+    <label for="topic-strss"> Stress Management</label>
+    </div>
+
+    <div class="checkbox-group">
+    <input class="checkbox-input" type="checkbox" id="topic-hydration" name="topic" vale="hydration"> 
+    <label for="topic-hydration"> Hydration</label>
+    </div>
+</fieldset> 
+
+<div class="form-field">
+<label for="rating"> How would you rate your overall health? *</label>
+<select class="select-input" id="rating" name="rating" required>
+    <option value="">--Please choose an option --</option>
+    <option value="excellent"> Excellent</option>
+    <option value="good"> Good </option>
+    <option value="fair"> Fair </option>
+    <option value="poor"> Poor</option>
+</select>
+<span class="error-message">Please pick a rating.</span>
+</div>
+
+<div class="form-field">
+<label for="comments"> Any additional comments?</label>
+<textarea class="textarea-input" id="comments" name="comments" row="40" col="40" maxlength="400"></textarea>
+<span class="char-counter" id="char-counter">0/400</span>
+</div>
+
+<button class="submit-btn" type="submit"> Submit Survey</button>
+</form>
+<p class="success-message" id="success-message">Thanks - your response was recorded.</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+    
+
