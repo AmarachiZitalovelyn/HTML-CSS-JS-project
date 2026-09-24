@@ -79,7 +79,7 @@ const exerciseRadios = form.querySelectorAll('input[name="exercise"]');
       return;
     }
 
-    successMessage.classList.add('visible');
+    SuccessMessage.classList.add('visible');
   });
 
 });
